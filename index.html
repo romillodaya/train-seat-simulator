@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Journey Selector</title>
+  <style>
+    :root {
+      --bg: #0b0c0f;
+      --card: #111318;
+      --text: #e9edf1;
+      --muted: #a6b0bb;
+      --accent: #3b82f6;
+      --accent-strong: #2563eb;
+      --ring: rgba(59,130,246,0.45);
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #f8fafc;
+        --card: #ffffff;
+        --text: #0f172a;
+        --muted: #475569;
+        --accent: #2563eb;
+        --accent-strong: #1d4ed8;
+        --ring: rgba(37,99,235,0.2);
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      background: radial-gradient(1200px 800px at 20% -10%, rgba(59,130,246,0.2), transparent 50%),
+                  radial-gradient(900px 600px at 120% 20%, rgba(16,185,129,0.12), transparent 60%),
+                  var(--bg);
+      color: var(--text);
+      min-height: 100dvh;
+    }
+    .wrap { max-width: 980px; margin: 0 auto; padding: 28px 20px 48px; }
+    header { text-align: center; margin-bottom: 28px; }
+    h1 { font-size: clamp(1.5rem, 1.2rem + 1.8vw, 2.2rem); margin: 8px 0 6px; letter-spacing: 0.3px; }
+    p.lead { color: var(--muted); margin: 0; }
+
+    .grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); margin-top: 18px; }
+    .card {
+      display: block; background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0));
+      border: 1px solid rgba(148,163,184,0.18); border-radius: 16px; padding: 18px 16px; text-decoration: none; color: var(--text);
+      position: relative; overflow: hidden; transition: transform .15s ease, border-color .15s ease, box-shadow .15s ease;
+    }
+    .card:hover { transform: translateY(-2px); border-color: var(--accent); box-shadow: 0 10px 30px -12px var(--ring); }
+    .title { display:flex; align-items:center; gap:10px; font-weight: 650; }
+    .title .badge { font-size: 12px; padding: 4px 8px; border-radius: 999px; background: rgba(59,130,246,0.15); color: var(--accent); border: 1px solid rgba(59,130,246,0.25); }
+    .desc { margin-top: 8px; color: var(--muted); font-size: 14px; line-height: 1.35; }
+
+    footer { margin-top: 34px; text-align: center; color: var(--muted); font-size: 13px; }
+    code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; background: rgba(148,163,184,0.15); padding: 3px 6px; border-radius: 6px; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>Journey Selector</h1>
+      <p class="lead">Choose one of the options below to view its standalone HTML page.</p>
+    </header>
+
+    <!-- Update the href values to match your actual HTML filenames -->
+    <div class="grid">
+      <a class="card" href="journey_hubli_to_vadodara.html">
+        <div class="title">🚆 <span>Hubli to Vadodara</span> <span class="badge">HTML</span></div>
+        <div class="desc">Opens <code>journey_hubli_to_vadodara.html<\/code>. Rename link & text as needed.</div>
+      </a>
+      <a class="card" href="journey_vadodara_to_ektanagar.html">
+        <div class="title">🪑 <span>Vadodara to Ektanagar</span> <span class="badge">HTML</span></div>
+        <div class="desc">Opens <code>journey_vadodara_to_ektanagar.html<\/code>.</div>
+      </a>
+      <a class="card" href="journey_ektanagar_to_vadodara.html">
+        <div class="title">🧭 <span>Ektanagar to Vadodara</span> <span class="badge">HTML</span></div>
+        <div class="desc">Opens <code>journey_ektanagar_to_vadodara.html<\/code>.</div>
+      </a>
+      <a class="card" href="journey_vadodara_to_hubli.html">
+        <div class="title">📄 <span>Vadodara to Hubli</span> <span class="badge">HTML</span></div>
+        <div class="desc">Opens <code>journey_vadodara_to_hubli.html<\/code>.</div>
+      </a>
+    </div>
+
+    <footer>
+      Tip: Keep all five files (<code>index.html</code> + 4 option pages) in the repo root for simple links.
+    </footer>
+  </div>
+</body>
+</html>
