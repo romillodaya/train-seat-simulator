@@ -60,7 +60,7 @@
             renderCoach();
         }
 
-        function getSeatType(num) { const m=num%8; if(m===7)return'SU'; if(m===0)return'SL'; const n=(num-1)%8+1; if(n===1||n===4)return'L'; if(n===2||n===5)return'M'; return'U'; }
+        function getSeatType(num) { const m=num%8; if(m===7)return'SL'; if(m===0)return'SU'; const n=(num-1)%8+1; if(n===1||n===4)return'L'; if(n===2||n===5)return'M'; return'U'; }
         
         function renderCoach() {
             const container = document.getElementById('coach-container');
